@@ -42,7 +42,7 @@ export class AppComponent {
     value.smtpPort = +value.smtpPort;
     value.smtpSecure = !!value.smtpSecure;
 
-    this.http.post('http://46.41.149.97/api', value)
+    this.http.post('http://46.41.149.97:5555', value)
       .subscribe(
         res => this.output = JSON.stringify(res, null, 2),
         err => this.output = JSON.stringify(err, null, 2)
